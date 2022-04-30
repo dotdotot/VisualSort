@@ -1,92 +1,141 @@
-/* Buttons */
+/*-------------------- Buttons (버튼) --------------------*/
 
 input[type="button"] {
+    /* 테두리 */
     border: none;
+    /* bg 색깔 */
     background: #555;
+    /* 세로 */
     padding: 10px;
     color: #fff;
+    /* 가로 길이 */
     width: 100px;
+    /* 테두리 둥근 정도 */
     border-radius: 10px;
+    /* 버튼 폰트 */
     font-weight: bold;
+    /* 투명도 */
     opacity: 0.7;
+    /* CSS transition은 CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법 */
+    /* 마우스 오버 후 몇s 후 애니메이션이 나타나게 할 것인지 */
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
+    /* 버튼 정렬 방법 */
     position: relative;
+    /* 버튼 사이 간격 */
     margin: 5px;
+    /* display 속성은 요소를 어떻게 보여줄지를 결정 */
     display: inline-block;
     vertical-align: middle;
+    /* 마우스 오버시 커서 */
     cursor: pointer;
 }
 
+/* button의 class = "green" */
 input[type="button"].green {
     background: greenyellow;
     color: #000;
 }
 
+/* button 마우스 오버시 */
 input[type="button"]:hover {
+    /* 투명도 */
     opacity: 1;
 }
 
+/* button(disabled) 마우스 오버시 */
 input[disabled]:hover {
+    /* 투명도 */
     opacity: 1;
 }
 
-/* Algo Selection */
+/*-------------------- Algo Selection (글자) --------------------*/
 
+/* slider */
 input[type="range"] {
+    /* 세로(폭) */
     padding: 0px;
+    /* 슬라이더 사이 간격 */
     margin: 0px;
 }
 
+/* algorithm, order 부분 정의 */
 select {
+    /* algorithm, order 부분 가로길이 정의 */
     width: 200px;
+    /* algorithm, order 부분 background-color 정의 */
     background-color: #222;
+    /* algorithm, order 부분 테두리를 둥글게 정의 */
     border-radius: 10px;
+    /* algorithm, order 부분 세로 길의 정의 */
     padding: 10px;
+    /* algorithm, order 폰트 정의 */
     font-family: UbuntuL;
     font-weight: bold;
+    /* algorithm, order 글자 크기 정의 */
     font-size: 15px;
+    /* algorithm, order 글자 색깔 정의 */
     color: #fff;
 }
 
+/* algorithm, order 부분이 Sort Button을 누름으로써 disabled 상태가 되었을 때 정의 */
 select[disabled] {
+    /* algorithm, order(disabled) 상태시 색깔 */
     color: #fff;
+    /* algorithm, order(disabled) 상태시 투명도 */
     opacity: 0.5;
+    /* algorithm, order(disabled) 상태시 마우스 오버시 커서 */
     cursor: not-allowed;
 }
 
-/* Sliddrs */
+/*-------------------- Sliddrs (슬라이더) --------------------*/
 
+/* 슬라이더 속성 */
 .slider {
     display: block;
     display: flex;
     align-items: center;
 }
 
+/* 슬라이더 input() */
 .slider input {
     -webkit-appearance: none;
+    /* 가로 */
     width: 200px;
+    /* 세로 */
     height: 15px;
+    /* 외곽선 둥근 정도 */
     border-radius: 5px;
+    /* 슬라이더 내부 background color */
     background: #555;
     outline: none;
+    /* 투명도 */
     opacity: 0.7;
+    /* CSS transition은 CSS 속성을 변경할 때 애니메이션 속도를 조절하는 방법 */
+    /* 마우스 오버 후 몇s 후 애니메이션이 나타나게 할 것인지 */
     -webkit-transition: 0.2s;
     transition: opacity 0.2s;
 }
 
+/* 슬라이더(speed) */
 .slider input#speed {
+    /* 글자 방향지정 rtl(right to left) */
     direction: rtl;
 }
 
+/* 슬라이더 마우스 오버 시 */
 .slider input:hover {
-    opacity: 1; /* Fully shown on mouse-over */
+    /* 투명도 */
+    opacity: 1; 
 }
 
+/* 슬라이더(disabled) 마우스 오버 시 */
 .slider input[disabled]:hover {
+    /* 투명도 */
     opacity: 0.5;
 }
 
+/* slider input -webkit- : 구글, 사파리 브라우저에 적용. */
 .slider input::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
@@ -97,10 +146,13 @@ select[disabled] {
     cursor: pointer;
 }
 
+/* 슬라이더(disabled) 마우스 오버 시 */
 .slider input[disabled]::-webkit-slider-thumb {
+    /* 커서 모양 */
     cursor: not-allowed;
 }
 
+/* slider input moz- : 파이어폭스 브라우저에 적용. */
 .slider input::-moz-range-thumb {
     width: 25px;
     height: 25px;
@@ -109,27 +161,42 @@ select[disabled] {
     cursor: pointer;
 }
 
+/* span의 class = "count" */
 span.count {
+    /* display 태그는 화면에 어떻게 드러나게 할지를 결정하는 속성 */
     display: inline-block;
+    /* 가로 */
     width: 20px;
+    /* text 정렬 */
     text-align: left;
+    /* 폰트 설정 */
     font-weight: bold;
+    /* 패딩 설정 */
     padding: 2px 0px 0px 5px;
 }
 
-/* Others */
+/*-------------------- Others --------------------*/
 
+/* speed, Elements, Algorithm, Order 글자 라벨 설정*/
 label {
     display: inline-block;
     font-weight: bold;
     text-align: right;
+
+    /* 상단 헤드부분 높이와 패딩 */
     width: 70px;
     padding: 10px 15px 10px 0px;
 }
 
+/* html, body, div, input 안에 들어있는 객체가 disabled 상태가 되었을 때 설정 */
+/* body부분에서 button만 disabled 상태가 되기 때문에 body만 두어도 따로 에러가 발생하지 않는 것을 확인 */
 html body div input[disabled] {
+    /* disabled 상태가 되었을 때 백그라운드 설정 */
     background: #222;
+    /* disabled 상태가 되었을 때 글자 설정 */
     color: #888;
+    /* disabled 상태가 되었을 때 투명도 설정 */
     opacity: 0.5;
+    /* disabled 상태가 되고 마우스 오버시 커서 설정 */
     cursor: not-allowed !important;
 }
